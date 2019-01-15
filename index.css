@@ -32,10 +32,16 @@
   border: 1px solid blue;
 }
 
-#dog-summary-container {
-  height: 75vh;
+#dog-summary-container img{
   text-align: center;
+  max-width: 200px;
 }
+#dog-summary-container {
+  text-align: center;
+  max-width: 200px;
+}
+
+
 
 #dog-info {
   display: flex;
@@ -44,10 +50,17 @@
 }
 
 #dog-info img {
-  max-width: 75vw;
-  max-height: 25vw;
+  max-width: 200px;
+  max-height: 200px;
+  text-align: center
 }
 
 body {
   margin: 0;
+
+  }
+
+.img {
+    max-width: 200px;
+  }
 }
