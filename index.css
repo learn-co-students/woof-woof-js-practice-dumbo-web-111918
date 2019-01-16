@@ -6,6 +6,10 @@
 
 }
 
+.hide {
+  display: none;
+}
+
 #good-dog-filter {
   margin-top: 1vh;
   width: 35vw;

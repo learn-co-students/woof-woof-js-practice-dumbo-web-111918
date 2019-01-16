@@ -37,7 +37,20 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     })
     //GOOD DOG FILTER BUTTON
-
+    
+    let gFilter = document.getElementById("good-dog-filter");
+    
+    gFilter.addEventListener("click", function(event) {
+        let allDogs = [...document.querySelectorAll(".pup-div")]
+        if (gFilter.innerText == "Filter good dogs: OFF") {
+            gFilter.innerText = "Filter good dogs: ON"
+            allDogs.filter(dog => dog.dataset.isGoodDog === 'false').map(dog => console.log(dog.className += " hide"))
+        } else if(gFilter.innerText == "Filter good dogs: ON") {
+            console.log("working logic")
+            gFilter.innerText = "Filter good dogs: OFF";
+            allDogs.filter(dog => dog.dataset.isGoodDog === 'false').map(dog => console.log(dog.classList.remove("hide")))
+        }
+    })
    
 
 })
@@ -61,6 +74,7 @@ let createDogs = function(obj) {
         let createDiv = document.createElement("div");
         createDiv.setAttribute("class", "pup-div")
         createDiv.setAttribute("data-id", `${pup.id}`)
+        createDiv.setAttribute("data-is-Good-Dog", `${pup.isGoodDog}`)
         createDiv.innerHTML = `<span class="pup-name"> ${pup.name} </span>`
         dogBar.append(createDiv);
     })
