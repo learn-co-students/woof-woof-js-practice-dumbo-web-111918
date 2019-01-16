@@ -30,6 +30,11 @@
   align-items: center;
   border-radius: 2em;
   border: 1px solid blue;
+  padding: 10px;
+}
+
+.box {
+  height: 100px;
 }
 
 #dog-summary-container {
